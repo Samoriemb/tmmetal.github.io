@@ -1,0 +1,58 @@
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+mobileMenuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    mobileMenuBtn.innerHTML = navLinks.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});
+// Form submission
+const quoteForm = document.getElementById("quoteForm");
+if (quoteForm) {
+    quoteForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Basic validation
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        
+        if (!name || !email) {
+            alert("Please fill in all required fields");
+            return;
+        }
+        
+        // Form submission logic would go here
+        alert("Thank you for your quote request! We will contact you shortly.");
+        quoteForm.reset();
+    });
+}
+function changeLanguage() {
+  const lang = document.getElementById('language-select').value;
+  // You would need to implement actual translation logic here
+  // This could involve:
+  // 1. Loading JSON translation files
+  // 2. Using a translation API
+  // 3. Or simply redirecting to language-specific pages
+  alert('Language changed to: ' + lang); // Placeholder
+}

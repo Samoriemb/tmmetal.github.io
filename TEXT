@@ -1,0 +1,39 @@
+your-website/
+├── images/
+│   └── gallery/
+│       ├── project1.jpg
+│       ├── project2.jpg
+│       ├── project3.jpg
+│       ├── project4.jpg
+│       ├── project5.jpg
+│       └── project6.jpg
+your-website/
+├── images/
+│   └── gallery/
+│       ├── your-photo1.jpg
+│       ├── your-photo2.jpg
+│       ├── your-photo3.jpg
+│       ├── your-photo4.jpg
+│       ├── your-photo5.jpg
+│       └── your-photo6.jpg
+
+your-website/
+├── images/
+│   ├── gallery/          (for thumbnail images)
+│   └── gallery-large/    (for full-size images when clicked)
+├── projects/             (for individual project pages)
+│   ├── welding-work.html
+│   └── other-projects.html
+your-website/
+├── images/
+│   └── gallery/
+│       ├── project1.jpg
+│       ├── project1-large.jpg
+│       ├── project2.jpg
+│       ├── project2-large.jpg
+│       └── ... (for all 6 projects)
+your-website/
+├── images/
+│   └── hero-background.jpg
+├── index.html
+└── styles.css
